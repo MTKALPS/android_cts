@@ -137,6 +137,10 @@ class CtsBuilder(object):
     plan.Include(r'android\.tests\.appsecurity')
     self.__WritePlan(plan, 'AppSecurity')
 
+    plan = tools.TestPlan(packages)
+    plan.Include(r'mediatek.*')
+    self.__WritePlan(plan, 'MTK')	
+
     # hard-coded white list for PDK plan
     plan.Exclude('.*')
     plan.Include('android\.aadb')

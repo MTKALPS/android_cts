@@ -14,6 +14,7 @@
 # limitations under the License.
 #
 
+LOCAL_PATH_CTS := $(call my-dir)
 include cts/CtsBuild.mk
 include cts/CtsCoverage.mk
-include $(call all-subdir-makefiles)
+include $(call all-makefiles-under,$(LOCAL_PATH_CTS))

@@ -247,3 +247,9 @@ CTS_TEST_XMLS := $(call cts-get-test-xmls,$(cts_host_libraries)) \
 
 # The following files will be placed in the tools directory of the CTS distribution
 CTS_TOOLS_LIST :=
+
+-include vendor/mediatek/proprietary/cts/CtsTestCaseList.mk
+
+CTS_TEST_CASE_LIST += $(MTK_CTS_TEST_CASE_LIST)
+CTS_TEST_CASES += $(MTK_CTS_TEST_CASES)
+CTS_TEST_XMLS += $(MTK_CTS_TEST_XMLS)
